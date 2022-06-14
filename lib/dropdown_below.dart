@@ -5,6 +5,7 @@ library dropdown_below;
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 const Duration _kDropdownMenuDuration = Duration(milliseconds: 300);
 
@@ -160,12 +161,15 @@ class _DropdownMenuState<T> extends State<_DropdownMenu<T>> {
 
     return FadeTransition(
       opacity: _fadeOpacity,
-      child: CustomPaint(
-        painter: _DropdownMenuPainter(
-          color: widget.dropdownColor ?? Colors.white,
-          elevation: 2,
-          selectedIndex: route.selectedIndex,
-          resize: _resize,
+      child: Neumorphic(
+        style: NeumorphicStyle(
+            shape: NeumorphicShape.flat,
+            boxShape: NeumorphicBoxShape.roundRect(BorderRadius.all(Radius.circular(12))),
+            depth: 2,
+            color: widget.dropdownColor ?? Color.fromRGBO(237, 238, 242, 1.0),
+            intensity: 0.95,
+            shadowLightColor: Colors.white,
+            shadowDarkColor: Colors.black.withOpacity(0.4)
         ),
         child: Semantics(
           scopesRoute: true,
@@ -189,7 +193,7 @@ class _DropdownMenuState<T> extends State<_DropdownMenu<T>> {
             ),
           ),
         ),
-      ),
+      )
     );
   }
 }
