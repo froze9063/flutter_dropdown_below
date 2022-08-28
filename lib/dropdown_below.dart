@@ -166,7 +166,7 @@ class _DropdownMenuState<T> extends State<_DropdownMenu<T>> {
             shape: NeumorphicShape.flat,
             boxShape: NeumorphicBoxShape.roundRect(BorderRadius.all(Radius.circular(12))),
             depth: 2,
-            color: widget.dropdownColor ?? Color.fromRGBO(237, 238, 242, 1.0),
+            color: widget.dropdownColor ?? Color.fromRGBO(255, 255, 255, 0.8),
             intensity: 0.95,
             shadowLightColor: Colors.white,
             shadowDarkColor: Colors.black.withOpacity(0.4)
