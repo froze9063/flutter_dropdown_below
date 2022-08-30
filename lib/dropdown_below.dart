@@ -168,8 +168,8 @@ class _DropdownMenuState<T> extends State<_DropdownMenu<T>> {
             depth: 2,
             color: /*widget.dropdownColor ?? */Color.fromRGBO(255, 255, 255, 1.0),
             intensity: 0.95,
-            shadowLightColor: Colors.black.withOpacity(0.4),
-            shadowDarkColor: Colors.black.withOpacity(0.4)
+            shadowLightColor: Colors.black.withOpacity(0.2),
+            shadowDarkColor: Colors.black.withOpacity(0.2)
         ),
         child: Semantics(
           scopesRoute: true,
